@@ -1,3 +1,10 @@
+<?php
+$name = 'Tedla Tafari';
+$title = "ASE 230 - $name";
+$profile = "assets/profile.jpg";
+$intro = "Hello Everyone. My name is Tedla Tafari. I am a Senior at Northern Kentucky University. I am Majoring in Computer Science and Economics. I am taking Server Side Programming to improve Web develop skill and learn more about PHP and SQL. I am very excited to work on projects and getting to know my classmate. :)";
+$funFact = "I really like to travel. I have been to 6 countries: Ethiopia, Mozambique, Zambia, Denmark, Bangladesh and United States.";
+?>
 <html lang="en">
 <!-- https://www.bootdey.com/snippets/view/team-user-resume#html -->
 <meta charset="utf-8">
@@ -10,18 +17,18 @@
 
 <body>
   <link rel="stylesheet" href="assets/css/detail.css" />
-  <title><?php echo "ASE 230 - Tedla Tafari" ?></title>
+  <title><?php echo $title; ?></title>
   <div class="container text-center mb-5">
-    <h1><?php echo "This is ASE 230 - Tedla Tafari" ?></h1>
+    <h1><?php echo $title; ?></h1>
   </div>
   <div class="container">
     <div class="row">
       <div class="col-lg-5 col-md-6">
         <div class="mb-2">
-          <img class="w-100" src=<?php echo "assets/profile.jpg" ?> alt="">
+          <img class="w-100" src=<?php echo $profile; ?> alt="">
         </div>
         <div class="mb-2 d-flex">
-          <h4 class="font-weight-normal"><?php echo "Tedla Tafari" ?></h4>
+          <h4 class="font-weight-normal"><?php echo $name; ?></h4>
           <div class="social d-flex ml-auto">
             <p class="pr-2 font-weight-normal"><?php echo "Follow on:" ?></p>
             <a href="#" class="text-muted mr-1">
@@ -57,10 +64,9 @@
       </div>
       <div class="col-lg-7 col-md-6 pl-xl-3">
         <h5 class="font-weight-normal"><?php echo "Short intro" ?></h5>
-        <p><?php echo "Hello Everyone. My name is Tedla Tafari. I am a Senior at Northern Kentucky University. I am Majoring in Computer Science and Economics.
-          I am taking Server Side Programming to improve Web develop skill and learn more about PHP and SQL. I am very excited to work on projects and getting to know my classmate. :)" ?></p>
+        <p><?php echo $intro; ?></p>
         <div class="my-2 bg-light p-2">
-          <p class="font-italic mb-0"><?php echo "“A dream you dream alone is only a dream. A dream you dream together is reality.” \r\n ― John Lennon" ?></p>
+          <p class="font-italic mb-0"><?php echo "“A dream you dream alone is only a dream. A dream you dream together is reality.” <br> ― John Lennon" ?></p>
         </div>
         <div class="mb-2 mt-2 pt-1">
           <h5 class="font-weight-normal"><?php echo "Top skills" ?></h5>
@@ -102,7 +108,7 @@
           </div>
         </div>
         <h5 class="font-weight-normal"><?php echo "Fun fact" ?></h5>
-        <p><?php echo "I really like to travel. I have been to 6 countries: Ethiopia, Mozambique, Zambia, Denmark, Bangladesh and United States." ?></p>
+        <p><?php echo $funFact ?></p>
       </div>
     </div>
   </div>

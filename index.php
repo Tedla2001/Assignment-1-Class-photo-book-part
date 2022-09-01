@@ -1,3 +1,8 @@
+<?php 
+$name = 'Tedla Tafari';
+$title = "ASE 230 - $name";
+$profile = "assets/profile.jpg";
+?>
 <!doctype html>
 <html lang="en">
 
@@ -42,7 +47,7 @@
             <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s"
                style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
                <!-- Team Thumb-->
-               <div class="advisor_thumb"><a href="Tedla_Tafari.php"><img src=<?php echo "assets/profile.jpg" ?> alt=""></a>
+               <div class="advisor_thumb"><a href="Tedla_Tafari.php"><img src=<?php echo $profile ?> alt=""></a>
                   <!-- Social Info-->
                   <div class="social-info"><a href="Tedla_Tafari.php"><i class="fa fa-facebook"></i></a><a
                         href="Tedla_Tafari.php"><i class="fa fa-twitter"></i></a><a href="Tedla_Tafari.php"><i
@@ -51,7 +56,7 @@
                <!-- Team Details-->
                <div class="single_advisor_details_info">
                   <h6>
-                     <?php echo "Tedla Tafari" ?>
+                     <?php echo $name ?>
                   </h6>
                   <p class="designation">
                      <?php echo "Founder & CEO" ?>
