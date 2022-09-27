@@ -1,18 +1,26 @@
 <?php 
-$students = [
-   ['name'=>'Tedla Tafari',
-   'year'=>'Senior',
-   'picture'=>'assets/profile.jpg'],
-   ['name'=>'Aaron Ramsey',
-   'year'=>'Junior',
-   'picture'=>'https://bootdey.com/img/Content/avatar/avatar7.png'],
-   ['name'=>'Timmy Turner',
-   'year'=>'Freshman',
-   'picture'=>'https://bootdey.com/img/Content/avatar/avatar6.png'],
-   ['name'=>'Samuel Class',
-   'year'=>'Freshman',
-   'picture'=>'https://bootdey.com/img/Content/avatar/avatar2.png']
-];
+
+include('function.php'); 
+include('data.php'); 
+
+// $students = [
+//    ['name'=>'Tedla Tafari',
+//    'year'=>'Senior',
+//    'picture'=>'assets/profile.jpg'],
+//    ['name'=>'Aaron Ramsey',
+//    'year'=>'Junior',
+//    'picture'=>'https://bootdey.com/img/Content/avatar/avatar7.png'],
+//    ['name'=>'Timmy Turner',
+//    'year'=>'Freshman',
+//    'picture'=>'https://bootdey.com/img/Content/avatar/avatar6.png'],
+//    ['name'=>'Samuel Class',
+//    'year'=>'Freshman',
+//    'picture'=>'https://bootdey.com/img/Content/avatar/avatar2.png']
+// ];
+
+
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -55,56 +63,7 @@ $students = [
 
    <div class="row">
    <?php
-      $i=0;
-      foreach($students as $student){
-         echo '<!-- Single Advisor-->
-         <div class="col-12 col-sm-6 col-lg-3">
-            <div class="single_advisor_profile wow fadeInUp" data-wow-delay="0.2s"
-               style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">
-               <!-- Team Thumb-->
-               <div class="advisor_thumb"><a href="detail.php?id='. $i .'"><img src='.$student['picture'].' alt=""></a>
-                  <!-- Social Info-->
-                  <div class="social-info"><a href="detail.php?id='. $i .'"><i class="fa fa-facebook"></i></a><a
-                        href="detail.php?id='. $i .'"><i class="fa fa-twitter"></i></a><a href="detail.php?id='. $i .'"><i
-                           class="fa fa-linkedin"></i></a></div>
-               </div>
-               <!-- Team Details-->
-               <div class="single_advisor_details_info">
-                  <h6>'.
-                     $student['name'].
-                  '</h6>
-                  <p class="designation">
-                     '.
-                     $student['year'].
-                  '
-                  </p>
-                  ';
-                     if ($student['year'] == 'Senior') {
-                        echo '<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25" >'.'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">'.'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">'.'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">';
-                     } elseif ($student['year'] == 'Junior') {
-                        echo'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">'.'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">'.'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">';
-                     } elseif ($student['year'] == 'Sophomore') {
-                        echo'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">'.'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">';
-                     } else {
-                        echo'<img src="assets/book-solid.svg"  alt="" id="year_icon"width="20" 
-                        height="25">';
-                     }
-                     echo'
-                  </a>
-               </div>
-            </div>
-         </div>';
-         $i++;
-      }
+      displayCard($students);
       ?>
    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
