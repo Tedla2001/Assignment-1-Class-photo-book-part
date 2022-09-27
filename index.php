@@ -3,24 +3,6 @@
 include('function.php'); 
 include('data.php'); 
 
-// $students = [
-//    ['name'=>'Tedla Tafari',
-//    'year'=>'Senior',
-//    'picture'=>'assets/profile.jpg'],
-//    ['name'=>'Aaron Ramsey',
-//    'year'=>'Junior',
-//    'picture'=>'https://bootdey.com/img/Content/avatar/avatar7.png'],
-//    ['name'=>'Timmy Turner',
-//    'year'=>'Freshman',
-//    'picture'=>'https://bootdey.com/img/Content/avatar/avatar6.png'],
-//    ['name'=>'Samuel Class',
-//    'year'=>'Freshman',
-//    'picture'=>'https://bootdey.com/img/Content/avatar/avatar2.png']
-// ];
-
-
-
-
 ?>
 <!doctype html>
 <html lang="en">
