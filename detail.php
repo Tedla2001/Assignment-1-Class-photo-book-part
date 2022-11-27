@@ -10,11 +10,10 @@ $funFact = $students[$_GET['id']]['funFact'];
 $dreamjob = $students[$_GET['id']]['dreamJob'];
 $dreamcompany = $students[$_GET['id']]['dreamCompany'];
 $email = $students[$_GET['id']]['email'];
-$htmlSkill=$students[$_GET['id']]['htmlSkill'];
-$cssSkill=$students[$_GET['id']]['cssSkill'];
-$javascriptSkill=$students[$_GET['id']]['javascriptSkill'];
-$phpSkill=$students[$_GET['id']]['phpSkill'];
+$skills = $students[$_GET['id']]['skills'];
+$level = $students[$_GET['id']]['levels'];
 $dob=$students[$_GET['id']]['DateOfBirth'];
+$quote=$students[$_GET['id']]['quote'];
 ?>
 <!doctype html>
 <html lang="en">
@@ -84,7 +83,7 @@ $dob=$students[$_GET['id']]['DateOfBirth'];
         </div>
       </div>
       <div class="col-lg-7 col-md-6 pl-xl-3">
-        <h5 class="font-weight-normal"><?php echo "Short intro" ?></h5>
+        <h5 class="font-weight-normal">Short intro</h5>
         <p><?php echo $intro; ?></p>
         <div class="my-2 bg-light p-2">
           <p class="font-italic mb-0"><?php echo "“A dream you dream alone is only a dream. A dream you dream together is reality.” <br> ― John Lennon" ?></p>
@@ -92,49 +91,29 @@ $dob=$students[$_GET['id']]['DateOfBirth'];
         <div class="mb-2 mt-2 pt-1">
           <h5 class="font-weight-normal"><?php echo "Top skills" ?></h5>
         </div>
-        <div class="py-1">
+
+        <?php
+        $i=0;
+        foreach($skills as $skill){
+        echo '<div class="py-1">
           <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width:<?php echo $htmlSkill?>" aria-valuenow="85" aria-valuemin="0"
+            <div class="progress-bar" role="progressbar" style="width:'.$level[$i] .'" aria-valuenow="85" aria-valuemin="0"
               aria-valuemax="100">
-              <div class="progress-bar-title"><?php echo "HTML" ?></div>
-              <span class="progress-bar-number"><?php echo $htmlSkill ?></span>
+              <div class="progress-bar-title">'.$skill.'</div>
+              <span class="progress-bar-number">'.$level[$i].'</span>
             </div>
           </div>
-        </div>
-        <div class="py-1">
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width:<?php echo $cssSkill?>" aria-valuenow="70" aria-valuemin="0"
-              aria-valuemax="100">
-              <div class="progress-bar-title"><?php echo "CSS" ?></div>
-              <span class="progress-bar-number"><?php echo $cssSkill ?></span>
-            </div>
-          </div>
-        </div>
-        <div class="py-1">
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width:<?php echo $javascriptSkill?>" aria-valuenow="77" aria-valuemin="0"
-              aria-valuemax="100">
-              <div class="progress-bar-title"><?php echo "Javascript" ?></div>
-              <span class="progress-bar-number"><?php echo $javascriptSkill ?></span>
-            </div>
-          </div>
-        </div>
-        <div class="py-1">
-          <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width:<?php echo $phpSkill?>" aria-valuenow="77" aria-valuemin="0"
-              aria-valuemax="100">
-              <div class="progress-bar-title"><?php echo "PHP" ?></div>
-              <span class="progress-bar-number"><?php echo $phpSkill ?></span>
-            </div>
-          </div>
-        </div>
-        <h5 class="font-weight-normal"><?php echo "Fun fact" ?></h5>
+        </div>';
+        $i++;
+        }?>
+
+        <h5 class="font-weight-normal">Fun fact</h5>
         <p><?php echo $funFact ?></p>
       </div>
     </div>
   </div>
   <div id="back_btn">
-    <a type="button" class="btn btn-secondary" href="index.php"><?php echo "Back To Our Staff"?></a>
+    <a type="button" class="btn btn-secondary" href="index.php">Back To Our Staff</a>
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -143,3 +122,4 @@ $dob=$students[$_GET['id']]['DateOfBirth'];
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
     crossorigin="anonymous"></script>
 </body>
+</html>

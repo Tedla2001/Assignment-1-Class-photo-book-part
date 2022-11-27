@@ -13,11 +13,10 @@ $students = [
     'dreamJob'=>'Software Engineer',
     'dreamCompany'=> 'Microsoft',
     'email'=>'tafarit2@nku.edu',
-    'htmlSkill'=>'95%',
-    'cssSkill'=>'85%',
-    'javascriptSkill'=>'80%',
-    'phpSkill'=>'50%',
-    'DateOfBirth'=>'03/01/2001'
+    'skills'=> ['Web Dev','Andriod','Project Management','PHP'],
+    'levels'=> ['90%','40%','30%','90%'],
+    'DateOfBirth'=>'03/01/2001',
+    'quote'=>'“A dream you dream alone is only a dream. A dream you dream together is reality.” <br> ― John Lennon'
     ],
     ['name'=>'Aaron Ramsey',
     'year'=>'Junior',
@@ -27,11 +26,10 @@ $students = [
     'dreamJob'=>'UX Designer',
     'dreamCompany'=> 'Kroger',
     'email'=>'ramseya1@anywhere.edu',
-    'htmlSkill'=>'90%',
-    'cssSkill'=>'80%',
-    'javascriptSkill'=>'70%',
-    'phpSkill'=>'40%',
-    'DateOfBirth'=>'06/19/2000'
+    'skills'=> ['Python','Java','Ruby','PHP'],
+    'levels'=> ['90%','55%','70%','30%'],
+    'DateOfBirth'=>'06/19/2000',
+    'quote'=>'“All you need is love” <br> ― John Lennon'
     ],
     ['name'=>'Timmy Turner',
     'year'=>'Freshman',
@@ -41,10 +39,9 @@ $students = [
     'dreamJob'=>'Marketing Manager',
     'dreamCompany'=> 'Google',
     'email'=>'turnert2@anywhere.edu',
-    'htmlSkill'=>'65%',
-    'cssSkill'=>'45%',
-    'javascriptSkill'=>'30%',
-    'phpSkill'=>'20%',
-    'DateOfBirth'=>'10/29/2001'
+    'skills'=> ['HTML','CSS','Javascript','PHP'],
+    'levels'=> ['90%','20%','40%','950%'],
+    'DateOfBirth'=>'10/29/2001',
+    'quote'=>'“Work Hard, Not Smarter” -unknown author'
     ]
   ];
